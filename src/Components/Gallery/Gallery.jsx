@@ -37,7 +37,7 @@ export const Gallery = () => {
                     )
                 })}
             </Grid>
-            <Button variant="contained" color="primary" onClick={showMoreImages}>Load More</Button>
+            <Button className={style.button} variant="contained" color="primary" onClick={showMoreImages}>Load More</Button>
         </div>
     )
 }
