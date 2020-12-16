@@ -8,12 +8,14 @@ import { Grid, Button } from '@material-ui/core';
 export const Gallery = () => {
 
     const [images, setImages] = useState([]);
-    const [visibleImages, setVisibleImages] = useState(10);
+    const [visibleImages, setVisibleImages] = useState(10); // For Load more button
 
+    // Load more button function
     const showMoreImages = () => {
         setVisibleImages(prevValue => prevValue + 10);
     }
 
+    // geting data from API
     useEffect(() => {
         const ImageGallery = async () => {
             const response = await fetch('https://jsonplaceholder.typicode.com/photos');
@@ -24,7 +26,7 @@ export const Gallery = () => {
         ImageGallery();
     }, []);
 
-    if(!images) {
+    if (!images) {
         return <h1>Loading...</h1>
     }
     return (
