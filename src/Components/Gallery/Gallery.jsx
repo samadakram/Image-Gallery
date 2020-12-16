@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import style from './Gallery.module.css';
 
 
 // Imported Compoents from Material Ui
@@ -21,12 +22,12 @@ export const Gallery = () => {
 
     return (
         <div>
-            <Grid container spacing={3}>
+            <Grid container>
 
                 {images.slice(0, 50).map((image, ind) => {
                     return (
-                        <Grid item xs={12} md={6} lg={4}>
-                            <img key={ind} src={image.url} alt={image} />
+                        <Grid  className={style.imageGrid} item xs={12} md={6} lg={4}>
+                            <img key={ind} src={image.thumbnailUrl} alt={image} />
                         </Grid>
                     )
                 })}
