@@ -5,7 +5,14 @@
     border: 1px solid black;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
+    background: #000 !important;
     width: 200px;
     margin-top: 20px !important;
     margin-bottom: 10px !important;
