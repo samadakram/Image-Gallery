@@ -24,22 +24,13 @@ export const Gallery = () => {
         <div>
             <Grid container>
 
-                {images.slice(0, 50).map((image, ind) => {
+                {images.slice(0, 10).map((image, ind) => {
                     return (
                         <Grid  className={style.imageGrid} item xs={12} md={6} lg={4}>
                             <img key={ind} src={image.thumbnailUrl} alt={image} />
                         </Grid>
                     )
                 })}
-                {/* <Grid item xs={12} md={6} lg={4}>
-                    <Paper elevation={3}>Paper 2</Paper>
-                </Grid>
-                <Grid item xs={12} md={6} lg={4}>
-                    <Paper elevation={3}>Paper 3</Paper>
-                </Grid>
-                <Grid item xs={12} md={6} lg={4}>
-                    <Paper elevation={3}>Paper 4</Paper>
-                </Grid> */}
             </Grid>
         </div>
     )
