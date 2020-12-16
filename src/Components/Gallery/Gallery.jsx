@@ -31,8 +31,8 @@ export const Gallery = () => {
 
                 {images.slice(0, visibleImages).map((image, ind) => {
                     return (
-                        <Grid  className={style.imageGrid} item xs={12} md={6} lg={4}>
-                            <img key={ind} src={image.thumbnailUrl} alt={image} />
+                        <Grid key={ind} className={style.imageGrid} item xs={12} md={6} lg={4}>
+                            <img  src={image.thumbnailUrl} alt={image} />
                         </Grid>
                     )
                 })}
